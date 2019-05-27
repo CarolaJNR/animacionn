@@ -1,0 +1,109 @@
+/* Animacion CSS 
+@keyframes nombreDeLaAnimacion{
+0%{
+	
+}
+5.6%{
+	
+}
+10%{
+	
+}
+50%{
+	
+}
+100%{
+	
+}
+}
+*/
+body{
+	background: url(img/natureBG.png) fixed;
+	background-size: cover;
+}
+@keyframes ufo{
+	0%{
+		transform:translateY(-1050px) translateX(-1500px);
+	}
+	50%{
+		transform:translateY(100px) translateX(700px) rotate(-30deg);
+	}
+	60%{
+		transform:translateY(50px) translateX(250px) rotate(30deg);
+	}
+	100%{
+		transform:translateY(-1050px) translateX(-1500px);
+	}
+}
+
+@keyframes caminar1{
+	0%{
+		background-position: 0px;
+	}
+	100%{
+		background-position: 2749px;
+	}
+}
+@keyframes caminar2{
+	0%{
+		background-position: 0px;
+	}
+	100%{
+		background-position: 1472px;
+	}
+}
+@keyframes caminar3{
+	0%{
+		transform:translateX(0px) translateY(0px);
+	}
+	40%{
+		transform:translateX(1820px) translateY(0px);
+	}
+	60%{
+		transform:translateX(2000px) translateY(-200px);
+	}
+	100%{
+		transform:translateX(2749px);
+	}
+}
+.caballo{
+	background: url("img/Horse-frames.jpg");
+	height: 121px;
+	width: 180px;
+	animation:caminar1 0.5s steps(15) reverse infinite;
+}
+.cartoon1{
+	background: url("img/capguy-walk.png");
+	height: 325px;
+	width: 180px;
+	animation:caminar2 0.8s steps(8) reverse infinite, caminar3 7s linear infinite;
+	z-index: 10;
+}
+.paisaje{
+	height: 600px;
+	width:100%;
+	position:fixed;
+	overflow: hidden;
+}
+.escalera{
+	position:absolute;
+	right: 0;
+	bottom:320px;
+	width: 50%;
+	transform: rotate(210deg);
+	overflow: hidden;
+	z-index: 0;
+}
+
+	
+.ufo{
+	position: absolute;
+	width:auto;
+	z-index: 7;
+	animation:ufo 5s ease-out infinite;
+}
+
+
+
+
+
